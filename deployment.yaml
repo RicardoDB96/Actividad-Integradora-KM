@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "py-app.fullname" . }}
+  labels:
+    app: {{ include "py-app.name" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "py-app.name" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "py-app.name" . }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - name: http
+              containerPort: 5000
+              containerPort: 5001
+          # Añade más configuraciones según sea necesario.

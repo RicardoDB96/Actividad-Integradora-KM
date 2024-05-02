@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: flask-app-config
+data:
+  app-config.yaml: |
+    MESSAGE: Hello services!
