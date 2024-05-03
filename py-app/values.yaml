@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: appimagesrj.azurecr.io/python-app
+  repository: ricardodb/python-app:latest
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
