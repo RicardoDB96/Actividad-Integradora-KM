@@ -20,5 +20,5 @@ spec:
           ports:
             - name: http
               containerPort: 5000
+            - name: custom-port
               containerPort: 5001
-          # Añade más configuraciones según sea necesario.
