@@ -36,6 +36,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
       - name: Set up kubectl
         uses: azure/setup-kubectl@v1
         with:
