@@ -12,7 +12,7 @@ env:
   RESOURCE_GROUP: 'actividad_integradora_group'
   CLUSTER_NAME: 'actividad_integradora'
   CHART_PATH: './py-app/'
-  CHART_OVERRIDE_PATH: './py-app/values-override.yaml'
+  CHART_OVERRIDE_PATH: './py-app/values.yaml'
 
 jobs:
   buildImage:
