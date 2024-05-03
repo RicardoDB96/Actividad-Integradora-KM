@@ -5,10 +5,9 @@
 replicaCount: 1
 
 image:
-  repository: ricardodb/python-app:latest
+  repository: ricardodb/python-app
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: latest
 
 imagePullSecrets: []
 nameOverride: ""
